@@ -23,6 +23,16 @@
 # markup to Perl POD format.  It's intended to be used to extract
 # something suitable for a manpage from a Texinfo document.
 
+#use warnings;
+#use 5.014;
+use utf8;
+use open ':encoding(utf8)';
+use Encode::Locale;
+binmode(STDIN, ":encoding(console_in)");
+binmode(STDOUT, ":encoding(console_out)");
+binmode(STDERR, ":encoding(console_out)");
+Encode::Locale::decode_argv;
+
 $output = 0;
 $skipping = 0;
 %sects = ();
@@ -351,6 +361,9 @@ $inf = pop @instack;
 }
 
 die "No filename or title\n" unless defined $fn && defined $tl;
+
+# UTF-8であると教える
+print "=encoding utf8\n\n";
 
 $sects{NAME} = "$fn \- $tl\n";
 $sects{FOOTNOTES} .= "=back\n" if exists $sects{FOOTNOTES};

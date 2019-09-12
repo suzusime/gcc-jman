@@ -40,8 +40,8 @@ gcc [@option{-c}|@option{-S}|@option{-E}] [@option{-std=}@var{standard}]
     [@option{-f}@var{option}@dots{}] [@option{-m}@var{machine-option}@dots{}]
     [@option{-o} @var{outfile}] [@@@var{file}] @var{infile}@dots{}
 
-ここに羅列されているのは最も重要なオプションのみです - 他は下記を御覧ください。
-@command{g++} は概ね @command{gcc} と同じオプションを受け付けます。
+Only the most useful options are listed here; see below for the
+remainder.  @command{g++} accepts mostly the same options as @command{gcc}.
 @c man end
 @c man begin SEEALSO
 gpl(7), gfdl(7), fsf-funding(7),

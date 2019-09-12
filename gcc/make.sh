@@ -17,5 +17,5 @@ echo timestamp > doc/gcc.1
 (pod2man -u --center="GNU" --release="gcc-9.2.0" --date=2019-08-12 --section=1 gcc.pod > doc/gcc.1.T$$ && \
         mv -f doc/gcc.1.T$$ doc/gcc.1) || \
         (rm -f doc/gcc.1.T$$ && exit 1)
-rm gcc.pod
+# rm gcc.pod
 

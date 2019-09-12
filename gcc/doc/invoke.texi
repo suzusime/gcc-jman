@@ -40,7 +40,7 @@ gcc [@option{-c}|@option{-S}|@option{-E}] [@option{-std=}@var{standard}]
     [@option{-f}@var{option}@dots{}] [@option{-m}@var{machine-option}@dots{}]
     [@option{-o} @var{outfile}] [@@@var{file}] @var{infile}@dots{}
 
-ここに羅列されているのは最も重要なオプションのみです - 他は下記を御覧ください。
+ここに羅列されているのは最も重要なオプションのみです。他は下記を御覧ください。
 @command{g++} は概ね @command{gcc} と同じオプションを受け付けます。
 @c man end
 @c man begin SEEALSO
@@ -67,78 +67,74 @@ for contributors to GCC@.
 @cindex options, GCC command
 
 @c man begin DESCRIPTION
-When you invoke GCC, it normally does preprocessing, compilation,
-assembly and linking.  The ``overall options'' allow you to stop this
-process at an intermediate stage.  For example, the @option{-c} option
-says not to run the linker.  Then the output consists of object files
-output by the assembler.
+GCC が呼び出されると、通常はプリプロセス、コンパイル、アセンブル、およびリンクが行われます。
+「全体オプション」によって、この過程をある中間状態で止めることができます。
+例えば、@option{-c} オプションはリンカを走らせないように指示します。
+この場合、出力はアセンブラにより出力されたオブジェクトファイルから成ります。
 @xref{Overall Options,,Options Controlling the Kind of Output}.
 
-Other options are passed on to one or more stages of processing.  Some options
-control the preprocessor and others the compiler itself.  Yet other
-options control the assembler and linker; most of these are not
-documented here, since you rarely need to use any of them.
+その他のオプションは処理過程の段階のうちのひとつかそれ以上に対して渡されます。
+あるオプションはプリプロセッサを制御し、別のあるオプションはコンパイラ自体を制御します。
+そしてまたあるオプションはアセンブラとリンカを制御しますが、それらの多くはここでは解説されていません。
+なぜなら、それらのオプションが必要になることは滅多にないからです。
 
 @cindex C compilation options
-Most of the command-line options that you can use with GCC are useful
-for C programs; when an option is only useful with another language
-(usually C++), the explanation says so explicitly.  If the description
-for a particular option does not mention a source language, you can use
-that option with all supported languages.
+GCC で使えるコマンドラインオプションの多くは C プログラムに対して有用なものです。
+あるオプションがその他の言語（多くの場合 C++）に対してのみ有用な場合は、そうであることを解説で明示します。
+もしある特定のオプションについての解説がソース言語について触れていない場合、
+そのオプションはすべてのサポートされた言語で用いることができます。
 
 @cindex cross compiling
 @cindex specifying machine version
 @cindex specifying compiler version and target machine
 @cindex compiler version, specifying
 @cindex target machine, specifying
-The usual way to run GCC is to run the executable called @command{gcc}, or
-@command{@var{machine}-gcc} when cross-compiling, or
-@command{@var{machine}-gcc-@var{version}} to run a specific version of GCC.
-When you compile C++ programs, you should invoke GCC as @command{g++} 
-instead.  @xref{Invoking G++,,Compiling C++ Programs}, 
-for information about the differences in behavior between @command{gcc} 
-and @code{g++} when compiling C++ programs.
+GCCを起動する通常の方法は、 @command{gcc} という実行ファイルを起動することです。
+但し、実行ファイル名はクロスコンパイルの際は @command{@var{machine}-gcc}、
+特定のバージョンの GCC を起動したい場合は @command{@var{machine}-gcc-@var{version}} としてください。
+C++ プログラムをコンパイルしたい場合は、代わりに @command{g++} として呼び出してください。
+C++ プログラムをコンパイルする際の @command{gcc} と @code{g++} の挙動の違いについては、
+@xref{Invoking G++,,Compiling C++ Programs} を参照してください。
 
 @cindex grouping options
 @cindex options, grouping
-The @command{gcc} program accepts options and file names as operands.  Many
-options have multi-letter names; therefore multiple single-letter options
-may @emph{not} be grouped: @option{-dv} is very different from @w{@samp{-d
--v}}.
+@command{gcc} プログラムはオペランドとしてオプションとファイル名を受け付けます。
+多くのオプションは複数文字から成ります。
+故に、複数の一文字オプションをまとめては@emph{いけません}。
+@option{-dv} は @w{@samp{-d -v}} と全く違うものです。
 
 @cindex order of options
 @cindex options, order
-You can mix options and other arguments.  For the most part, the order
-you use doesn't matter.  Order does matter when you use several
-options of the same kind; for example, if you specify @option{-L} more
-than once, the directories are searched in the order specified.  Also,
-the placement of the @option{-l} option is significant.
+オプションとその他の引数は混ぜることができます。
+ほとんどの場合、順序は関係ありません。
+順序が関係するのは、同種のオプションがいくつか使われたときです。
+例えば、@option{-L} を二度以上指定した場合、ディレクトリは指定された順に探索されます。
+同様に、@option{-l} オプションの位置も重要です。
 
-Many options have long names starting with @samp{-f} or with
-@samp{-W}---for example,
-@option{-fmove-loop-invariants}, @option{-Wformat} and so on.  Most of
-these have both positive and negative forms; the negative form of
-@option{-ffoo} is @option{-fno-foo}.  This manual documents
-only one of these two forms, whichever one is not the default.
+多くのオプションが @samp{-f} や @samp{-W} から始まる名前を持っています。
+例えば、@option{-fmove-loop-invariants} や @option{-Wformat} といったものです。
+これらの多くには肯定形と否定形の両方があります。
+@option{-ffoo} の否定形は @option{-fno-foo} です。
+このマニュアルはこれら二つのうちの一つ、既定値でない方のみを解説します。
 
-Some options take one or more arguments typically separated either
-by a space or by the equals sign (@samp{=}) from the option name.
-Unless documented otherwise, an argument can be either numeric or
-a string.  Numeric arguments must typically be small unsigned decimal
-or hexadecimal integers.  Hexadecimal arguments must begin with
-the @samp{0x} prefix.  Arguments to options that specify a size
-threshold of some sort may be arbitrarily large decimal or hexadecimal
-integers followed by a byte size suffix designating a multiple of bytes
-such as @code{kB} and @code{KiB} for kilobyte and kibibyte, respectively,
-@code{MB} and @code{MiB} for megabyte and mebibyte, @code{GB} and
-@code{GiB} for gigabyte and gigibyte, and so on.  Such arguments are
-designated by @var{byte-size} in the following text.  Refer to the NIST,
-IEC, and other relevant national and international standards for the full
-listing and explanation of the binary and decimal byte size prefixes.
-
+オプションによっては、一つまたは複数の引数を取ります。
+これら引数は、典型的にはスペースか等号(@samp{=})のどちらかによってオプション名と区切られます。
+そうでないと書かれていない限り、引数は数値か文字列かのどちらかになり得ます。
+数値引数は、典型的には十進または十六進の小さな符号無し整数でなくてはなりません。
+十六進数の引数は @samp{0x} という接頭辞を付さなくてはなりません。
+オプションへの引数の中でも何らかの大きさの閾値を指定するものには、
+バイトサイズ接尾辞がついた任意に大きな十進または十六進の数値が許されます。
+バイトサイズ接尾辞とはバイトの倍量を示すものであり、例えば
+@code{kB} と @code{KiB} はそれぞれキロバイトとキビバイト、
+@code{MB} と @code{MiB} はメガバイトとメビバイト、
+@code{GB} と @code{GiB} はギガバイトとギビバイトを表します。
+このような引数は以下の文章の中で @var{byte-size} と示されます。
+二進及び十進のバイトサイズ接尾辞の完全な表と説明は、米国国立標準技術研究所(NIST)、
+国際電気標準会議(IEC)、及びその他の関係する国家規格と国際規格を参照してください。
 @c man end
 
 @xref{Option Index}, for an index to GCC's options.
+
 
 @menu
 * Option Summary::      Brief list of all options, without explanations.

@@ -78,17 +78,17 @@ C<GB> と C<GiB> はギガバイトとギビバイトを表します。
 
 
 
-=head2 Option Summary
+=head2 オプション梗概
 
 
-Here is a summary of all the options, grouped by type.  Explanations are
-in the following sections.
+これはすべてのオプションを種類ごとに分類して一覧にしたものです。
+説明は後の節にあります。
 
 
 =over 4
 
 
-=item I<Overall Options>
+=item I<全体オプション>
 
 
 B<-c  -S  -E  -o> I<file>  B<-x> I<language>  
@@ -99,7 +99,7 @@ B<-fplugin=>I<file>  B<-fplugin-arg->I<name>B<=>I<arg>
 B<-fdump-ada-spec>[B<-slim>]  B<-fada-spec-parent=>I<unit>  B<-fdump-go-spec=>I<file>
 
 
-=item I<C Language Options>
+=item I<C言語オプション>
 
 
 B<-ansi  -std=>I<standard>  B<-fgnu89-inline 
@@ -115,7 +115,7 @@ B<-fallow-single-precision  -fcond-mismatch  -flax-vector-conversions
 -funsigned-bitfields  -funsigned-char>
 
 
-=item I<C++ Language Options>
+=item I<C++言語オプション>
 
 
 B<-fabi-version=>I<n>  B<-fno-access-control 
@@ -155,7 +155,7 @@ B<-fno-threadsafe-statics  -fuse-cxa-atexit
 -Wsign-promo  -Wvirtual-inheritance>
 
 
-=item I<Objective-C and Objective-C++ Language Options>
+=item I<Objective-C及びObjective-C++言語オプション>
 
 
 B<-fconstant-string-class=>I<class-name> 
@@ -179,7 +179,7 @@ B<-freplace-objc-classes
 -Wundeclared-selector>
 
 
-=item I<Diagnostic Message Formatting Options>
+=item I<診断メッセージ書式オプション>
 
 
 B<-fmessage-length=>I<n>  
@@ -194,7 +194,7 @@ B<-fdiagnostics-parseable-fixits  -fdiagnostics-generate-patch
 -fno-show-column>
 
 
-=item I<Warning Options>
+=item I<警告オプション>
 
 
 B<-fsyntax-only  -fmax-errors=>I<n>  B<-Wpedantic 
@@ -280,7 +280,7 @@ B<-Wunused-but-set-parameter  -Wunused-but-set-variable
 -Wzero-as-null-pointer-constant>
 
 
-=item I<C and Objective-C-only Warning Options>
+=item I<C及びObjective-C限定の警告オプション>
 
 B<-Wbad-function-cast  -Wmissing-declarations 
 -Wmissing-parameter-type  -Wmissing-prototypes  -Wnested-externs 
@@ -289,7 +289,7 @@ B<-Wbad-function-cast  -Wmissing-declarations
 -Wdeclaration-after-statement  -Wpointer-sign>
 
 
-=item I<Debugging Options>
+=item I<デバッグオプション>
 
 
 B<-g  -g>I<level>  B<-gdwarf  -gdwarf->I<version> 
@@ -313,7 +313,7 @@ B<-feliminate-unused-debug-symbols  -femit-class-debug-always
 -fvar-tracking  -fvar-tracking-assignments>
 
 
-=item I<Optimization Options>
+=item I<最適化オプション>
 
 
 B<-faggressive-loop-optimizations 
@@ -408,7 +408,7 @@ B<-freorder-blocks-and-partition  -freorder-functions
 B<-O  -O0  -O1  -O2  -O3  -Os  -Ofast  -Og>
 
 
-=item I<Program Instrumentation Options>
+=item I<プログラム計装オプション>
 
 
 B<-p  -pg  -fprofile-arcs  --coverage  -ftest-coverage 
@@ -431,7 +431,7 @@ B<-fvtv-counts  -fvtv-debug
 -finstrument-functions-exclude-file-list=>I<file>B<,>I<file>B<,...>
 
 
-=item I<Preprocessor Options>
+=item I<プリプロセッサオプション>
 
 
 B<-A>I<question>B<=>I<answer> 
@@ -452,13 +452,13 @@ B<-M  -MD  -MF  -MG  -MM  -MMD  -MP  -MQ  -MT
 -Wp,>I<option>  B<-Xpreprocessor> I<option>
 
 
-=item I<Assembler Options>
+=item I<アセンブラオプション>
 
 
 B<-Wa,>I<option>  B<-Xassembler> I<option>
 
 
-=item I<Linker Options>
+=item I<リンカオプション>
 
 
 I<object-file-name>  B<-fuse-ld=>I<linker>  B<-l>I<library> 
@@ -472,7 +472,7 @@ B<-pie  -pthread  -r  -rdynamic
 B<-u> I<symbol>  B<-z> I<keyword>
 
 
-=item I<Directory Options>
+=item I<ディレクトリオプション>
 
 
 B<-B>I<prefix>  B<-I>I<dir>  B<-I- 
@@ -485,7 +485,7 @@ B<-L>I<dir>  B<-no-canonical-prefixes  --no-sysroot-suffix
 -nostdinc  -nostdinc++  --sysroot=>I<dir>
 
 
-=item I<Code Generation Options>
+=item I<コード生成オプション>
 
 
 B<-fcall-saved->I<reg>  B<-fcall-used->I<reg> 
@@ -506,7 +506,7 @@ B<-ftrampolines  -ftrapv  -fwrapv
 B<-fstrict-volatile-bitfields  -fsync-libcalls>
 
 
-=item I<Developer Options>
+=item I<開発者オプション>
 
 
 B<-d>I<letters>  B<-dumpspecs  -dumpmachine  -dumpversion 
@@ -551,7 +551,7 @@ B<-fsel-sched-verbose  -fsel-sched-dump-cfg  -fsel-sched-pipelining-verbose
 -save-temps  -save-temps=cwd  -save-temps=obj  -time>[B<=>I<file>]
 
 
-=item I<Machine-Dependent Options>
+=item I<機種依存オプション>
 
 
 
@@ -1261,19 +1261,20 @@ See S/390 and zSeries Options.
 
 
 
-=head2 Options Controlling the Kind of Output
+=head2 出力の種類を制御するオプション
 
 
-Compilation can involve up to four stages: preprocessing, compilation
-proper, assembly and linking, always in that order.  GCC is capable of
-preprocessing and compiling several files either into several
-assembler input files, or into one assembler input file; then each
-assembler input file produces an object file, and linking combines all
-the object files (those newly compiled, and those specified as input)
-into an executable file.
+コンパイルは最高で4つの段階をもちます。
+プリプロセス、厳密な意味でのコンパイル、アセンブル、リンクです。
+これらは常にこの順序で行われます。
+GCC はいくつかのファイルをファイルをプリプロセス、コンパイルした結果を
+一つのアセンブラ入力ファイルとすることも、いくつかのアセンブラ入力ファイルとすることもできます。
+その後、それぞれのアセンブラ入力ファイルはそれぞれ一つのオブジェクトファイルとなり、
+リンクによってすべてのオブジェクトファイル（新たにコンパイルされたもの及び入力と指定されたもの）
+が結合され、一つの実行ファイルとなります。
 
-For any given input file, the file name suffix determines what kind of
-compilation is done:
+与えられたすべての入力ファイルについて、
+ファイル名の接尾辞によってどのような種類のコンパイルを行うかが決定されます：
 
 
 =over 4
@@ -1281,17 +1282,17 @@ compilation is done:
 
 =item I<file>B<.c>
 
-C source code that must be preprocessed.
+プリプロセスされなければならない C のソースコード。
 
 
 =item I<file>B<.i>
 
-C source code that should not be preprocessed.
+プリプロセスされてはならない C のソースコード。
 
 
 =item I<file>B<.ii>
 
-C++ source code that should not be preprocessed.
+プリプロセスされてはならない C++ のソースコード。
 
 
 =item I<file>B<.m>
@@ -1322,9 +1323,8 @@ Objective-C++ source code that should not be preprocessed.
 
 =item I<file>B<.h>
 
-C, C++, Objective-C or Objective-C++ header file to be turned into a
-precompiled header (default), or C, C++ header file to be turned into an
-Ada spec (via the B<-fdump-ada-spec> switch).
+C, C++, Objective-C, ObjectiveC++ のヘッダファイルで、プリコンパイル済みヘッダに変換されるもの（既定値）。
+または、C, C++ のヘッダファイルで、Ada spec に変換されるもの（B<-fdump-ada-spec> が指定されたとき）。
 
 
 =item I<file>B<.cc>
@@ -1347,9 +1347,9 @@ Ada spec (via the B<-fdump-ada-spec> switch).
 
 =item I<file>B<.C>
 
-C++ source code that must be preprocessed.  Note that in B<.cxx>,
-the last two letters must both be literally B<x>.  Likewise,
-B<.C> refers to a literal capital C.
+プリプロセスされなければならない C++ のソースコード。
+B<.cxx> の後ろ2文字は文字通り B<x> でなければならないことに注意。
+同様に B<.C> は文字通り大文字の C であることを意味する。
 
 
 =item I<file>B<.mm>
@@ -1388,7 +1388,7 @@ Objective-C++ source code that should not be preprocessed.
 
 =item I<file>B<.tcc>
 
-C++ header file to be turned into a precompiled header or Ada spec.
+プリコンパイル済みヘッダまたは Ada spec に変換される C++ ヘッダファイル。
 
 
 =item I<file>B<.f>
@@ -1492,7 +1492,7 @@ package body).  Such files are also called I<bodies>.
 
 =item I<file>B<.s>
 
-Assembler code.
+アセンブラコード。
 
 
 =item I<file>B<.S>
@@ -1500,13 +1500,13 @@ Assembler code.
 
 =item I<file>B<.sx>
 
-Assembler code that must be preprocessed.
+プリプロセスされなければならないアセンブラコード。
 
 
-=item I<other>
+=item I<その他>
 
-An object file to be fed straight into linking.
-Any file name with no recognized suffix is treated this way.
+リンカにそのまま入力されるオブジェクトファイル。
+名前に認識される接尾辞を持たない任意のファイルはこのように扱われる。
 
 =back
 

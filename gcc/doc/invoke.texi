@@ -172,13 +172,13 @@ C++ プログラムをコンパイルする際の @command{gcc} と @code{g++} �
 @c man begin OPTIONS
 
 @node Option Summary
-@section Option Summary
+@section オプション梗概
 
-Here is a summary of all the options, grouped by type.  Explanations are
-in the following sections.
+これはすべてのオプションを種類ごとに分類して一覧にしたものです。
+説明は後の節にあります。
 
 @table @emph
-@item Overall Options
+@item 全体オプション
 @xref{Overall Options,,Options Controlling the Kind of Output}.
 @gccoptlist{-c  -S  -E  -o @var{file}  -x @var{language}  @gol
 -v  -###  --help@r{[}=@var{class}@r{[},@dots{}@r{]]}  --target-help  --version @gol
@@ -187,7 +187,7 @@ in the following sections.
 -fplugin=@var{file}  -fplugin-arg-@var{name}=@var{arg}  @gol
 -fdump-ada-spec@r{[}-slim@r{]}  -fada-spec-parent=@var{unit}  -fdump-go-spec=@var{file}}
 
-@item C Language Options
+@item C言語オプション
 @xref{C Dialect Options,,Options Controlling C Dialect}.
 @gccoptlist{-ansi  -std=@var{standard}  -fgnu89-inline @gol
 -fpermitted-flt-eval-methods=@var{standard} @gol
@@ -201,7 +201,7 @@ in the following sections.
 -fsigned-bitfields  -fsigned-char @gol
 -funsigned-bitfields  -funsigned-char}
 
-@item C++ Language Options
+@item C++言語オプション
 @xref{C++ Dialect Options,,Options Controlling C++ Dialect}.
 @gccoptlist{-fabi-version=@var{n}  -fno-access-control @gol
 -faligned-new=@var{n}  -fargs-in-order=@var{n}  -fchar8_t  -fcheck-new @gol
@@ -239,7 +239,7 @@ in the following sections.
 -Wno-class-conversion  -Wno-terminate @gol
 -Wsign-promo  -Wvirtual-inheritance}
 
-@item Objective-C and Objective-C++ Language Options
+@item Objective-C及びObjective-C++言語オプション
 @xref{Objective-C and Objective-C++ Dialect Options,,Options Controlling
 Objective-C and Objective-C++ Dialects}.
 @gccoptlist{-fconstant-string-class=@var{class-name} @gol
@@ -262,7 +262,7 @@ Objective-C and Objective-C++ Dialects}.
 -Wstrict-selector-match @gol
 -Wundeclared-selector}
 
-@item Diagnostic Message Formatting Options
+@item 診断メッセージ書式オプション
 @xref{Diagnostic Message Formatting Options,,Options to Control Diagnostic Messages Formatting}.
 @gccoptlist{-fmessage-length=@var{n}  @gol
 -fdiagnostics-show-location=@r{[}once@r{|}every-line@r{]}  @gol
@@ -275,7 +275,7 @@ Objective-C and Objective-C++ Dialects}.
 -fdiagnostics-show-template-tree  -fno-elide-type @gol
 -fno-show-column}
 
-@item Warning Options
+@item 警告オプション
 @xref{Warning Options,,Options to Request or Suppress Warnings}.
 @gccoptlist{-fsyntax-only  -fmax-errors=@var{n}  -Wpedantic @gol
 -pedantic-errors @gol
@@ -359,14 +359,14 @@ Objective-C and Objective-C++ Dialects}.
 -Wwrite-strings @gol
 -Wzero-as-null-pointer-constant}
 
-@item C and Objective-C-only Warning Options
+@item C及びObjective-C限定の警告オプション
 @gccoptlist{-Wbad-function-cast  -Wmissing-declarations @gol
 -Wmissing-parameter-type  -Wmissing-prototypes  -Wnested-externs @gol
 -Wold-style-declaration  -Wold-style-definition @gol
 -Wstrict-prototypes  -Wtraditional  -Wtraditional-conversion @gol
 -Wdeclaration-after-statement  -Wpointer-sign}
 
-@item Debugging Options
+@item デバッグオプション
 @xref{Debugging Options,,Options for Debugging Your Program}.
 @gccoptlist{-g  -g@var{level}  -gdwarf  -gdwarf-@var{version} @gol
 -ggdb  -grecord-gcc-switches  -gno-record-gcc-switches @gol
@@ -388,7 +388,7 @@ Objective-C and Objective-C++ Dialects}.
 -fno-merge-debug-strings  -fno-dwarf2-cfi-asm @gol
 -fvar-tracking  -fvar-tracking-assignments}
 
-@item Optimization Options
+@item 最適化オプション
 @xref{Optimize Options,,Options that Control Optimization}.
 @gccoptlist{-faggressive-loop-optimizations @gol
 -falign-functions[=@var{n}[:@var{m}:[@var{n2}[:@var{m2}]]]] @gol
@@ -481,7 +481,7 @@ Objective-C and Objective-C++ Dialects}.
 --param @var{name}=@var{value}
 -O  -O0  -O1  -O2  -O3  -Os  -Ofast  -Og}
 
-@item Program Instrumentation Options
+@item プログラム計装オプション
 @xref{Instrumentation Options,,Program Instrumentation Options}.
 @gccoptlist{-p  -pg  -fprofile-arcs  --coverage  -ftest-coverage @gol
 -fprofile-abs-path @gol
@@ -502,7 +502,7 @@ Objective-C and Objective-C++ Dialects}.
 -finstrument-functions-exclude-function-list=@var{sym},@var{sym},@dots{} @gol
 -finstrument-functions-exclude-file-list=@var{file},@var{file},@dots{}}
 
-@item Preprocessor Options
+@item プリプロセッサオプション
 @xref{Preprocessor Options,,Options Controlling the Preprocessor}.
 @gccoptlist{-A@var{question}=@var{answer} @gol
 -A-@var{question}@r{[}=@var{answer}@r{]} @gol
@@ -521,11 +521,11 @@ Objective-C and Objective-C++ Dialects}.
 -U@var{macro}  -undef  @gol
 -Wp,@var{option}  -Xpreprocessor @var{option}}
 
-@item Assembler Options
+@item アセンブラオプション
 @xref{Assembler Options,,Passing Options to the Assembler}.
 @gccoptlist{-Wa,@var{option}  -Xassembler @var{option}}
 
-@item Linker Options
+@item リンカオプション
 @xref{Link Options,,Options for Linking}.
 @gccoptlist{@var{object-file-name}  -fuse-ld=@var{linker}  -l@var{library} @gol
 -nostartfiles  -nodefaultlibs  -nolibc  -nostdlib @gol
@@ -537,7 +537,7 @@ Objective-C and Objective-C++ Dialects}.
 -T @var{script}  -Wl,@var{option}  -Xlinker @var{option} @gol
 -u @var{symbol}  -z @var{keyword}}
 
-@item Directory Options
+@item ディレクトリオプション
 @xref{Directory Options,,Options for Directory Search}.
 @gccoptlist{-B@var{prefix}  -I@var{dir}  -I- @gol
 -idirafter @var{dir} @gol
@@ -548,7 +548,7 @@ Objective-C and Objective-C++ Dialects}.
 -L@var{dir}  -no-canonical-prefixes  --no-sysroot-suffix @gol
 -nostdinc  -nostdinc++  --sysroot=@var{dir}}
 
-@item Code Generation Options
+@item コード生成オプション
 @xref{Code Gen Options,,Options for Code Generation Conventions}.
 @gccoptlist{-fcall-saved-@var{reg}  -fcall-used-@var{reg} @gol
 -ffixed-@var{reg}  -fexceptions @gol
@@ -567,7 +567,7 @@ Objective-C and Objective-C++ Dialects}.
 -fvisibility=@r{[}default@r{|}internal@r{|}hidden@r{|}protected@r{]} @gol
 -fstrict-volatile-bitfields  -fsync-libcalls}
 
-@item Developer Options
+@item 開発者オプション
 @xref{Developer Options,,GCC Developer Options}.
 @gccoptlist{-d@var{letters}  -dumpspecs  -dumpmachine  -dumpversion @gol
 -dumpfullversion  -fchecking  -fchecking=@var{n}  -fdbg-cnt-list @gol
@@ -610,7 +610,7 @@ Objective-C and Objective-C++ Dialects}.
 -print-sysroot  -print-sysroot-headers-suffix @gol
 -save-temps  -save-temps=cwd  -save-temps=obj  -time@r{[}=@var{file}@r{]}}
 
-@item Machine-Dependent Options
+@item 機種依存オプション
 @xref{Submodel Options,,Machine-Dependent Options}.
 @c This list is ordered alphanumerically by subsection name.
 @c Try and put the significant identifier (CPU or system) first,
@@ -1320,29 +1320,30 @@ See S/390 and zSeries Options.
 
 
 @node Overall Options
-@section Options Controlling the Kind of Output
+@section 出力の種類を制御するオプション
 
-Compilation can involve up to four stages: preprocessing, compilation
-proper, assembly and linking, always in that order.  GCC is capable of
-preprocessing and compiling several files either into several
-assembler input files, or into one assembler input file; then each
-assembler input file produces an object file, and linking combines all
-the object files (those newly compiled, and those specified as input)
-into an executable file.
+コンパイルは最高で4つの段階をもちます。
+プリプロセス、厳密な意味でのコンパイル、アセンブル、リンクです。
+これらは常にこの順序で行われます。
+GCC はいくつかのファイルをファイルをプリプロセス、コンパイルした結果を
+一つのアセンブラ入力ファイルとすることも、いくつかのアセンブラ入力ファイルとすることもできます。
+その後、それぞれのアセンブラ入力ファイルはそれぞれ一つのオブジェクトファイルとなり、
+リンクによってすべてのオブジェクトファイル（新たにコンパイルされたもの及び入力と指定されたもの）
+が結合され、一つの実行ファイルとなります。
 
 @cindex file name suffix
-For any given input file, the file name suffix determines what kind of
-compilation is done:
+与えられたすべての入力ファイルについて、
+ファイル名の接尾辞によってどのような種類のコンパイルを行うかが決定されます：
 
 @table @gcctabopt
 @item @var{file}.c
-C source code that must be preprocessed.
+プリプロセスされなければならない C のソースコード。
 
 @item @var{file}.i
-C source code that should not be preprocessed.
+プリプロセスされてはならない C のソースコード。
 
 @item @var{file}.ii
-C++ source code that should not be preprocessed.
+プリプロセスされてはならない C++ のソースコード。
 
 @item @var{file}.m
 Objective-C source code.  Note that you must link with the @file{libobjc}
@@ -1361,9 +1362,8 @@ to a literal capital M@.
 Objective-C++ source code that should not be preprocessed.
 
 @item @var{file}.h
-C, C++, Objective-C or Objective-C++ header file to be turned into a
-precompiled header (default), or C, C++ header file to be turned into an
-Ada spec (via the @option{-fdump-ada-spec} switch).
+C, C++, Objective-C, ObjectiveC++ のヘッダファイルで、プリコンパイル済みヘッダに変換されるもの（既定値）。
+または、C, C++ のヘッダファイルで、Ada spec に変換されるもの（@option{-fdump-ada-spec} が指定されたとき）。
 
 @item @var{file}.cc
 @itemx @var{file}.cp
@@ -1372,9 +1372,9 @@ Ada spec (via the @option{-fdump-ada-spec} switch).
 @itemx @var{file}.CPP
 @itemx @var{file}.c++
 @itemx @var{file}.C
-C++ source code that must be preprocessed.  Note that in @samp{.cxx},
-the last two letters must both be literally @samp{x}.  Likewise,
-@samp{.C} refers to a literal capital C@.
+プリプロセスされなければならない C++ のソースコード。
+@samp{.cxx} の後ろ2文字は文字通り @samp{x} でなければならないことに注意。
+同様に @samp{.C} は文字通り大文字の C であることを意味する。
 
 @item @var{file}.mm
 @itemx @var{file}.M
@@ -1391,7 +1391,7 @@ Objective-C++ source code that should not be preprocessed.
 @itemx @var{file}.HPP
 @itemx @var{file}.h++
 @itemx @var{file}.tcc
-C++ header file to be turned into a precompiled header or Ada spec.
+プリコンパイル済みヘッダまたは Ada spec に変換される C++ ヘッダファイル。
 
 @item @var{file}.f
 @itemx @var{file}.for
@@ -1450,15 +1450,15 @@ package body).  Such files are also called @dfn{bodies}.
 @c @var{file}.r
 
 @item @var{file}.s
-Assembler code.
+アセンブラコード。
 
 @item @var{file}.S
 @itemx @var{file}.sx
-Assembler code that must be preprocessed.
+プリプロセスされなければならないアセンブラコード。
 
-@item @var{other}
-An object file to be fed straight into linking.
-Any file name with no recognized suffix is treated this way.
+@item @var{その他}
+リンカにそのまま入力されるオブジェクトファイル。
+名前に認識される接尾辞を持たない任意のファイルはこのように扱われる。
 @end table
 
 @opindex x

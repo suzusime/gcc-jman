@@ -147,20 +147,20 @@ GCCを起動する通常の方法は、 \fBgcc\fR という実行ファイルを
 国際電気標準会議(\s-1IEC\s0)、及びその他の関係する国家規格と国際規格を参照してください。
 .SH "OPTIONS"
 .IX Header "OPTIONS"
-.SS "Option Summary"
-.IX Subsection "Option Summary"
-Here is a summary of all the options, grouped by type.  Explanations are
-in the following sections.
-.IP "\fIOverall Options\fR" 4
-.IX Item "Overall Options"
+.SS "オプション梗概"
+.IX Subsection "オプション梗概"
+これはすべてのオプションを種類ごとに分類して一覧にしたものです。
+説明は後の節にあります。
+.IP "\fI全体オプション\fR" 4
+.IX Item "全体オプション"
 \&\fB\-c  \-S  \-E  \-o\fR \fIfile\fR  \fB\-x\fR \fIlanguage\fR  
 \&\fB\-v  \-###  \-\-help\fR[\fB=\fR\fIclass\fR[\fB,...\fR]]  \fB\-\-target\-help  \-\-version 
 \&\-pass\-exit\-codes  \-pipe  \-specs=\fR\fIfile\fR  \fB\-wrapper  
 @\fR\fIfile\fR  \fB\-ffile\-prefix\-map=\fR\fIold\fR\fB=\fR\fInew\fR  
 \&\fB\-fplugin=\fR\fIfile\fR  \fB\-fplugin\-arg\-\fR\fIname\fR\fB=\fR\fIarg\fR  
 \&\fB\-fdump\-ada\-spec\fR[\fB\-slim\fR]  \fB\-fada\-spec\-parent=\fR\fIunit\fR  \fB\-fdump\-go\-spec=\fR\fIfile\fR
-.IP "\fIC Language Options\fR" 4
-.IX Item "C Language Options"
+.IP "\fIC言語オプション\fR" 4
+.IX Item "C言語オプション"
 \&\fB\-ansi  \-std=\fR\fIstandard\fR  \fB\-fgnu89\-inline 
 \&\-fpermitted\-flt\-eval\-methods=\fR\fIstandard\fR 
 \&\fB\-aux\-info\fR \fIfilename\fR  \fB\-fallow\-parameterless\-variadic\-functions 
@@ -172,8 +172,8 @@ in the following sections.
 \&\fB\-fallow\-single\-precision  \-fcond\-mismatch  \-flax\-vector\-conversions 
 \&\-fsigned\-bitfields  \-fsigned\-char 
 \&\-funsigned\-bitfields  \-funsigned\-char\fR
-.IP "\fI\*(C+ Language Options\fR" 4
-.IX Item " Language Options"
+.IP "\fI\*(C+言語オプション\fR" 4
+.IX Item "言語オプション"
 \&\fB\-fabi\-version=\fR\fIn\fR  \fB\-fno\-access\-control 
 \&\-faligned\-new=\fR\fIn\fR  \fB\-fargs\-in\-order=\fR\fIn\fR  \fB\-fchar8_t  \-fcheck\-new 
 \&\-fconstexpr\-depth=\fR\fIn\fR  \fB\-fconstexpr\-loop\-limit=\fR\fIn\fR 
@@ -209,8 +209,8 @@ in the following sections.
 \&\-Woverloaded\-virtual  \-Wno\-pmf\-conversions 
 \&\-Wno\-class\-conversion  \-Wno\-terminate 
 \&\-Wsign\-promo  \-Wvirtual\-inheritance\fR
-.IP "\fIObjective-C and Objective\-\*(C+ Language Options\fR" 4
-.IX Item "Objective-C and Objective- Language Options"
+.IP "\fIObjective\-C及びObjective\-\*(C+言語オプション\fR" 4
+.IX Item "Objective-C及びObjective-言語オプション"
 \&\fB\-fconstant\-string\-class=\fR\fIclass-name\fR 
 \&\fB\-fgnu\-runtime  \-fnext\-runtime 
 \&\-fno\-nil\-receivers 
@@ -230,8 +230,8 @@ in the following sections.
 \&\-Wno\-protocol  \-Wselector 
 \&\-Wstrict\-selector\-match 
 \&\-Wundeclared\-selector\fR
-.IP "\fIDiagnostic Message Formatting Options\fR" 4
-.IX Item "Diagnostic Message Formatting Options"
+.IP "\fI診断メッセージ書式オプション\fR" 4
+.IX Item "診断メッセージ書式オプション"
 \&\fB\-fmessage\-length=\fR\fIn\fR  
 \&\fB\-fdiagnostics\-show\-location=\fR[\fBonce\fR|\fBevery-line\fR]  
 \&\fB\-fdiagnostics\-color=\fR[\fBauto\fR|\fBnever\fR|\fBalways\fR]  
@@ -242,8 +242,8 @@ in the following sections.
 \&\fB\-fdiagnostics\-parseable\-fixits  \-fdiagnostics\-generate\-patch 
 \&\-fdiagnostics\-show\-template\-tree  \-fno\-elide\-type 
 \&\-fno\-show\-column\fR
-.IP "\fIWarning Options\fR" 4
-.IX Item "Warning Options"
+.IP "\fI警告オプション\fR" 4
+.IX Item "警告オプション"
 \&\fB\-fsyntax\-only  \-fmax\-errors=\fR\fIn\fR  \fB\-Wpedantic 
 \&\-pedantic\-errors 
 \&\-w  \-Wextra  \-Wall  \-Waddress  \-Waddress\-of\-packed\-member 
@@ -325,15 +325,15 @@ in the following sections.
 \&\-Wvla  \-Wvla\-larger\-than=\fR\fIbyte-size\fR  \fB\-Wvolatile\-register\-var 
 \&\-Wwrite\-strings 
 \&\-Wzero\-as\-null\-pointer\-constant\fR
-.IP "\fIC and Objective-C-only Warning Options\fR" 4
-.IX Item "C and Objective-C-only Warning Options"
+.IP "\fIC及びObjective\-C限定の警告オプション\fR" 4
+.IX Item "C及びObjective-C限定の警告オプション"
 \&\fB\-Wbad\-function\-cast  \-Wmissing\-declarations 
 \&\-Wmissing\-parameter\-type  \-Wmissing\-prototypes  \-Wnested\-externs 
 \&\-Wold\-style\-declaration  \-Wold\-style\-definition 
 \&\-Wstrict\-prototypes  \-Wtraditional  \-Wtraditional\-conversion 
 \&\-Wdeclaration\-after\-statement  \-Wpointer\-sign\fR
-.IP "\fIDebugging Options\fR" 4
-.IX Item "Debugging Options"
+.IP "\fIデバッグオプション\fR" 4
+.IX Item "デバッグオプション"
 \&\fB\-g  \-g\fR\fIlevel\fR  \fB\-gdwarf  \-gdwarf\-\fR\fIversion\fR 
 \&\fB\-ggdb  \-grecord\-gcc\-switches  \-gno\-record\-gcc\-switches 
 \&\-gstabs  \-gstabs+  \-gstrict\-dwarf  \-gno\-strict\-dwarf 
@@ -353,8 +353,8 @@ in the following sections.
 \&\fB\-feliminate\-unused\-debug\-symbols  \-femit\-class\-debug\-always 
 \&\-fno\-merge\-debug\-strings  \-fno\-dwarf2\-cfi\-asm 
 \&\-fvar\-tracking  \-fvar\-tracking\-assignments\fR
-.IP "\fIOptimization Options\fR" 4
-.IX Item "Optimization Options"
+.IP "\fI最適化オプション\fR" 4
+.IX Item "最適化オプション"
 \&\fB\-faggressive\-loop\-optimizations 
 \&\-falign\-functions[=\fR\fIn\fR\fB[:\fR\fIm\fR\fB:[\fR\fIn2\fR\fB[:\fR\fIm2\fR\fB]]]] 
 \&\-falign\-jumps[=\fR\fIn\fR\fB[:\fR\fIm\fR\fB:[\fR\fIn2\fR\fB[:\fR\fIm2\fR\fB]]]] 
@@ -445,8 +445,8 @@ in the following sections.
 \&\-fweb  \-fwhole\-program  \-fwpa  \-fuse\-linker\-plugin 
 \&\-\-param\fR \fIname\fR\fB=\fR\fIvalue\fR
 \&\fB\-O  \-O0  \-O1  \-O2  \-O3  \-Os  \-Ofast  \-Og\fR
-.IP "\fIProgram Instrumentation Options\fR" 4
-.IX Item "Program Instrumentation Options"
+.IP "\fIプログラム計装オプション\fR" 4
+.IX Item "プログラム計装オプション"
 \&\fB\-p  \-pg  \-fprofile\-arcs  \-\-coverage  \-ftest\-coverage 
 \&\-fprofile\-abs\-path 
 \&\-fprofile\-dir=\fR\fIpath\fR  \fB\-fprofile\-generate  \-fprofile\-generate=\fR\fIpath\fR 
@@ -465,8 +465,8 @@ in the following sections.
 \&\-finstrument\-functions 
 \&\-finstrument\-functions\-exclude\-function\-list=\fR\fIsym\fR\fB,\fR\fIsym\fR\fB,... 
 \&\-finstrument\-functions\-exclude\-file\-list=\fR\fIfile\fR\fB,\fR\fIfile\fR\fB,...\fR
-.IP "\fIPreprocessor Options\fR" 4
-.IX Item "Preprocessor Options"
+.IP "\fIプリプロセッサオプション\fR" 4
+.IX Item "プリプロセッサオプション"
 \&\fB\-A\fR\fIquestion\fR\fB=\fR\fIanswer\fR 
 \&\fB\-A\-\fR\fIquestion\fR[\fB=\fR\fIanswer\fR] 
 \&\fB\-C  \-CC  \-D\fR\fImacro\fR[\fB=\fR\fIdefn\fR] 
@@ -483,11 +483,11 @@ in the following sections.
 \&\-traditional  \-traditional\-cpp  \-trigraphs 
 \&\-U\fR\fImacro\fR  \fB\-undef  
 \&\-Wp,\fR\fIoption\fR  \fB\-Xpreprocessor\fR \fIoption\fR
-.IP "\fIAssembler Options\fR" 4
-.IX Item "Assembler Options"
+.IP "\fIアセンブラオプション\fR" 4
+.IX Item "アセンブラオプション"
 \&\fB\-Wa,\fR\fIoption\fR  \fB\-Xassembler\fR \fIoption\fR
-.IP "\fILinker Options\fR" 4
-.IX Item "Linker Options"
+.IP "\fIリンカオプション\fR" 4
+.IX Item "リンカオプション"
 \&\fIobject-file-name\fR  \fB\-fuse\-ld=\fR\fIlinker\fR  \fB\-l\fR\fIlibrary\fR 
 \&\fB\-nostartfiles  \-nodefaultlibs  \-nolibc  \-nostdlib 
 \&\-e\fR \fIentry\fR  \fB\-\-entry=\fR\fIentry\fR 
@@ -497,8 +497,8 @@ in the following sections.
 \&\-shared  \-shared\-libgcc  \-symbolic 
 \&\-T\fR \fIscript\fR  \fB\-Wl,\fR\fIoption\fR  \fB\-Xlinker\fR \fIoption\fR 
 \&\fB\-u\fR \fIsymbol\fR  \fB\-z\fR \fIkeyword\fR
-.IP "\fIDirectory Options\fR" 4
-.IX Item "Directory Options"
+.IP "\fIディレクトリオプション\fR" 4
+.IX Item "ディレクトリオプション"
 \&\fB\-B\fR\fIprefix\fR  \fB\-I\fR\fIdir\fR  \fB\-I\- 
 \&\-idirafter\fR \fIdir\fR 
 \&\fB\-imacros\fR \fIfile\fR  \fB\-imultilib\fR \fIdir\fR 
@@ -507,8 +507,8 @@ in the following sections.
 \&\fB\-iwithprefix\fR \fIdir\fR  \fB\-iwithprefixbefore\fR \fIdir\fR  
 \&\fB\-L\fR\fIdir\fR  \fB\-no\-canonical\-prefixes  \-\-no\-sysroot\-suffix 
 \&\-nostdinc  \-nostdinc++  \-\-sysroot=\fR\fIdir\fR
-.IP "\fICode Generation Options\fR" 4
-.IX Item "Code Generation Options"
+.IP "\fIコード生成オプション\fR" 4
+.IX Item "コード生成オプション"
 \&\fB\-fcall\-saved\-\fR\fIreg\fR  \fB\-fcall\-used\-\fR\fIreg\fR 
 \&\fB\-ffixed\-\fR\fIreg\fR  \fB\-fexceptions 
 \&\-fnon\-call\-exceptions  \-fdelete\-dead\-exceptions  \-funwind\-tables 
@@ -525,8 +525,8 @@ in the following sections.
 \&\fB\-ftrampolines  \-ftrapv  \-fwrapv 
 \&\-fvisibility=\fR[\fBdefault\fR|\fBinternal\fR|\fBhidden\fR|\fBprotected\fR] 
 \&\fB\-fstrict\-volatile\-bitfields  \-fsync\-libcalls\fR
-.IP "\fIDeveloper Options\fR" 4
-.IX Item "Developer Options"
+.IP "\fI開発者オプション\fR" 4
+.IX Item "開発者オプション"
 \&\fB\-d\fR\fIletters\fR  \fB\-dumpspecs  \-dumpmachine  \-dumpversion 
 \&\-dumpfullversion  \-fchecking  \-fchecking=\fR\fIn\fR  \fB\-fdbg\-cnt\-list 
 \&\-fdbg\-cnt=\fR\fIcounter-value-list\fR 
@@ -567,8 +567,8 @@ in the following sections.
 \&\-print\-prog\-name=\fR\fIprogram\fR  \fB\-print\-search\-dirs  \-Q 
 \&\-print\-sysroot  \-print\-sysroot\-headers\-suffix 
 \&\-save\-temps  \-save\-temps=cwd  \-save\-temps=obj  \-time\fR[\fB=\fR\fIfile\fR]
-.IP "\fIMachine-Dependent Options\fR" 4
-.IX Item "Machine-Dependent Options"
+.IP "\fI機種依存オプション\fR" 4
+.IX Item "機種依存オプション"
 \&\fIAArch64 Options\fR
 \&\fB\-mabi=\fR\fIname\fR  \fB\-mbig\-endian  \-mlittle\-endian 
 \&\-mgeneral\-regs\-only 
@@ -1269,27 +1269,28 @@ See \s-1RS/6000\s0 and PowerPC Options.
 .Sp
 \&\fIzSeries Options\fR
 See S/390 and zSeries Options.
-.SS "Options Controlling the Kind of Output"
-.IX Subsection "Options Controlling the Kind of Output"
-Compilation can involve up to four stages: preprocessing, compilation
-proper, assembly and linking, always in that order.  \s-1GCC\s0 is capable of
-preprocessing and compiling several files either into several
-assembler input files, or into one assembler input file; then each
-assembler input file produces an object file, and linking combines all
-the object files (those newly compiled, and those specified as input)
-into an executable file.
+.SS "出力の種類を制御するオプション"
+.IX Subsection "出力の種類を制御するオプション"
+コンパイルは最高で4つの段階をもちます。
+プリプロセス、厳密な意味でのコンパイル、アセンブル、リンクです。
+これらは常にこの順序で行われます。
+\&\s-1GCC\s0 はいくつかのファイルをファイルをプリプロセス、コンパイルした結果を
+一つのアセンブラ入力ファイルとすることも、いくつかのアセンブラ入力ファイルとすることもできます。
+その後、それぞれのアセンブラ入力ファイルはそれぞれ一つのオブジェクトファイルとなり、
+リンクによってすべてのオブジェクトファイル（新たにコンパイルされたもの及び入力と指定されたもの）
+が結合され、一つの実行ファイルとなります。
 .PP
-For any given input file, the file name suffix determines what kind of
-compilation is done:
+与えられたすべての入力ファイルについて、
+ファイル名の接尾辞によってどのような種類のコンパイルを行うかが決定されます：
 .IP "\fIfile\fR\fB.c\fR" 4
 .IX Item "file.c"
-C source code that must be preprocessed.
+プリプロセスされなければならない C のソースコード。
 .IP "\fIfile\fR\fB.i\fR" 4
 .IX Item "file.i"
-C source code that should not be preprocessed.
+プリプロセスされてはならない C のソースコード。
 .IP "\fIfile\fR\fB.ii\fR" 4
 .IX Item "file.ii"
-\&\*(C+ source code that should not be preprocessed.
+プリプロセスされてはならない \*(C+ のソースコード。
 .IP "\fIfile\fR\fB.m\fR" 4
 .IX Item "file.m"
 Objective-C source code.  Note that you must link with the \fIlibobjc\fR
@@ -1311,9 +1312,8 @@ to a literal capital M.
 Objective\-\*(C+ source code that should not be preprocessed.
 .IP "\fIfile\fR\fB.h\fR" 4
 .IX Item "file.h"
-C, \*(C+, Objective-C or Objective\-\*(C+ header file to be turned into a
-precompiled header (default), or C, \*(C+ header file to be turned into an
-Ada spec (via the \fB\-fdump\-ada\-spec\fR switch).
+C, \*(C+, Objective-C, ObjectiveC++ のヘッダファイルで、プリコンパイル済みヘッダに変換されるもの（既定値）。
+または、C, \*(C+ のヘッダファイルで、Ada spec に変換されるもの（\fB\-fdump\-ada\-spec\fR が指定されたとき）。
 .IP "\fIfile\fR\fB.cc\fR" 4
 .IX Item "file.cc"
 .PD 0
@@ -1330,9 +1330,9 @@ Ada spec (via the \fB\-fdump\-ada\-spec\fR switch).
 .IP "\fIfile\fR\fB.C\fR" 4
 .IX Item "file.C"
 .PD
-\&\*(C+ source code that must be preprocessed.  Note that in \fB.cxx\fR,
-the last two letters must both be literally \fBx\fR.  Likewise,
-\&\fB.C\fR refers to a literal capital C.
+プリプロセスされなければならない \*(C+ のソースコード。
+\&\fB.cxx\fR の後ろ2文字は文字通り \fBx\fR でなければならないことに注意。
+同様に \fB.C\fR は文字通り大文字の C であることを意味する。
 .IP "\fIfile\fR\fB.mm\fR" 4
 .IX Item "file.mm"
 .PD 0
@@ -1361,7 +1361,7 @@ Objective\-\*(C+ source code that should not be preprocessed.
 .IP "\fIfile\fR\fB.tcc\fR" 4
 .IX Item "file.tcc"
 .PD
-\&\*(C+ header file to be turned into a precompiled header or Ada spec.
+プリコンパイル済みヘッダまたは Ada spec に変換される \*(C+ ヘッダファイル。
 .IP "\fIfile\fR\fB.f\fR" 4
 .IX Item "file.f"
 .PD 0
@@ -1436,18 +1436,18 @@ Ada source code file containing a library unit body (a subprogram or
 package body).  Such files are also called \fIbodies\fR.
 .IP "\fIfile\fR\fB.s\fR" 4
 .IX Item "file.s"
-Assembler code.
+アセンブラコード。
 .IP "\fIfile\fR\fB.S\fR" 4
 .IX Item "file.S"
 .PD 0
 .IP "\fIfile\fR\fB.sx\fR" 4
 .IX Item "file.sx"
 .PD
-Assembler code that must be preprocessed.
-.IP "\fIother\fR" 4
-.IX Item "other"
-An object file to be fed straight into linking.
-Any file name with no recognized suffix is treated this way.
+プリプロセスされなければならないアセンブラコード。
+.IP "\fIその他\fR" 4
+.IX Item "その他"
+リンカにそのまま入力されるオブジェクトファイル。
+名前に認識される接尾辞を持たない任意のファイルはこのように扱われる。
 .PP
 You can specify the input language explicitly with the \fB\-x\fR option:
 .IP "\fB\-x\fR \fIlanguage\fR" 4

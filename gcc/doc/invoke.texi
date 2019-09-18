@@ -1462,14 +1462,15 @@ package body).  Such files are also called @dfn{bodies}.
 @end table
 
 @opindex x
-You can specify the input language explicitly with the @option{-x} option:
+@option{-x} オプションを用いると、入力の言語を明示的に指定できます：
 
 @table @gcctabopt
 @item -x @var{language}
-Specify explicitly the @var{language} for the following input files
-(rather than letting the compiler choose a default based on the file
-name suffix).  This option applies to all following input files until
-the next @option{-x} option.  Possible values for @var{language} are:
+これ以降の入力ファイルの言語が @var{language} であると明示的に指定する
+（コンパイラに接尾辞に基づく既定値を選ばせない）。
+このオプションは次の @option{-x} オプションが指定されるまでの
+すべての入力ファイルに適用される。
+@var{language} として可能な値は次の通り：
 @smallexample
 c  c-header  cpp-output
 c++  c++-header  c++-cpp-output
@@ -1484,48 +1485,45 @@ brig
 @end smallexample
 
 @item -x none
-Turn off any specification of a language, so that subsequent files are
-handled according to their file name suffixes (as they are if @option{-x}
-has not been used at all).
+言語についてのすべての指定を取り消す。
+よって、以降のファイルは名前の接尾辞に従って扱われる（@option{-x} が全く使われていないときと同様に扱われる）。
 @end table
 
-If you only want some of the stages of compilation, you can use
-@option{-x} (or filename suffixes) to tell @command{gcc} where to start, and
-one of the options @option{-c}, @option{-S}, or @option{-E} to say where
-@command{gcc} is to stop.  Note that some combinations (for example,
-@samp{-x cpp-output -E}) instruct @command{gcc} to do nothing at all.
+もしコンパイルの特定の段階のみを行いたいなら、
+@option{-x}（またはファイル名接尾辞）によってどの段階から始めるかを、
+@option{-c}, @option{-S}, @option{-E} のどれか一つによってどの段階まで行うかを、
+@command{gcc} に指示することができます。
+いくつかの組み合わせ（例えば @samp{-x cpp-output -E}）は @command{gcc} に対して
+何もしないよう指示することに注意してください。
 
 @table @gcctabopt
 @item -c
 @opindex c
-Compile or assemble the source files, but do not link.  The linking
-stage simply is not done.  The ultimate output is in the form of an
-object file for each source file.
+ソースファイルのコンパイルまたはアセンブルを行うが、リンクを行わない。
+リンクの段階は単に行われない。
+最終的な出力は、それぞれのソースファイルについて一つずつのオブジェクトファイルという形になる。
 
-By default, the object file name for a source file is made by replacing
-the suffix @samp{.c}, @samp{.i}, @samp{.s}, etc., with @samp{.o}.
+既定では、あるソースファイルに対するオブジェクトファイルの名前は
+@samp{.c}, @samp{.i}, @samp{.s} 等の接尾辞を @samp{.o} によって置換したものとなる。
 
-Unrecognized input files, not requiring compilation or assembly, are
-ignored.
+認識されない入力ファイル（コンパイルまたはアセンブルを必要としないもの）は無視される。
 
 @item -S
 @opindex S
-Stop after the stage of compilation proper; do not assemble.  The output
-is in the form of an assembler code file for each non-assembler input
-file specified.
+厳密な意味でのコンパイルの段階の後に停止し、アセンブルを行わない。
+出力は、指定されたそれぞれのアセンブラでない入力に対して一つずつのアセンブラコードとなる。
 
-By default, the assembler file name for a source file is made by
-replacing the suffix @samp{.c}, @samp{.i}, etc., with @samp{.s}.
+既定では、あるソースファイルに対するアセンブラファイルの名前は
+@samp{.c}, @samp{.i} 等の接尾辞を @samp{.s} によって置換したものとなる。
 
-Input files that don't require compilation are ignored.
+コンパイルを必要としない入力ファイルは無視される。
 
 @item -E
 @opindex E
-Stop after the preprocessing stage; do not run the compiler proper.  The
-output is in the form of preprocessed source code, which is sent to the
-standard output.
+プリプロセスの段階の後に停止し、厳密な意味でのコンパイルを行わない。
+出力はプリプロセス済みソースコードの形式であり、標準出力に送られる。
 
-Input files that don't require preprocessing are ignored.
+プリプロセスを必要としない入力ファイルは無視される。
 
 @cindex output file option
 @item -o @var{file}

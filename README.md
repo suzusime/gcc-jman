@@ -19,3 +19,5 @@ $ man doc/gcc.1
 - source language: ソース言語
 - "Numeric arguments must typically be small unsigned decimal or hexadecimal integers."
   - small ってどういう意味だろう。仮に「小さな数字」という意味だと解釈して訳す。
+- "Compilation can involve up to four stages: preprocessing, compilation proper, assembly and linking, always in that order."
+  - 直訳すべきか？

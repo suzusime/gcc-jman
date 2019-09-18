@@ -1449,13 +1449,14 @@ package body).  Such files are also called \fIbodies\fR.
 リンカにそのまま入力されるオブジェクトファイル。
 名前に認識される接尾辞を持たない任意のファイルはこのように扱われる。
 .PP
-You can specify the input language explicitly with the \fB\-x\fR option:
+\&\fB\-x\fR オプションを用いると、入力の言語を明示的に指定できます：
 .IP "\fB\-x\fR \fIlanguage\fR" 4
 .IX Item "-x language"
-Specify explicitly the \fIlanguage\fR for the following input files
-(rather than letting the compiler choose a default based on the file
-name suffix).  This option applies to all following input files until
-the next \fB\-x\fR option.  Possible values for \fIlanguage\fR are:
+これ以降の入力ファイルの言語が \fIlanguage\fR であると明示的に指定する
+（コンパイラに接尾辞に基づく既定値を選ばせない）。
+このオプションは次の \fB\-x\fR オプションが指定されるまでの
+すべての入力ファイルに適用される。
+\&\fIlanguage\fR として可能な値は次の通り：
 .Sp
 .Vb 10
 \&        c  c\-header  cpp\-output
@@ -1471,43 +1472,40 @@ the next \fB\-x\fR option.  Possible values for \fIlanguage\fR are:
 .Ve
 .IP "\fB\-x none\fR" 4
 .IX Item "-x none"
-Turn off any specification of a language, so that subsequent files are
-handled according to their file name suffixes (as they are if \fB\-x\fR
-has not been used at all).
+言語についてのすべての指定を取り消す。
+よって、以降のファイルは名前の接尾辞に従って扱われる（\fB\-x\fR が全く使われていないときと同様に扱われる）。
 .PP
-If you only want some of the stages of compilation, you can use
-\&\fB\-x\fR (or filename suffixes) to tell \fBgcc\fR where to start, and
-one of the options \fB\-c\fR, \fB\-S\fR, or \fB\-E\fR to say where
-\&\fBgcc\fR is to stop.  Note that some combinations (for example,
-\&\fB\-x cpp-output \-E\fR) instruct \fBgcc\fR to do nothing at all.
+もしコンパイルの特定の段階のみを行いたいなら、
+\&\fB\-x\fR（またはファイル名接尾辞）によってどの段階から始めるかを、
+\&\fB\-c\fR, \fB\-S\fR, \fB\-E\fR のどれか一つによってどの段階まで行うかを、
+\&\fBgcc\fR に指示することができます。
+いくつかの組み合わせ（例えば \fB\-x cpp-output \-E\fR）は \fBgcc\fR に対して
+何もしないよう指示することに注意してください。
 .IP "\fB\-c\fR" 4
 .IX Item "-c"
-Compile or assemble the source files, but do not link.  The linking
-stage simply is not done.  The ultimate output is in the form of an
-object file for each source file.
+ソースファイルのコンパイルまたはアセンブルを行うが、リンクを行わない。
+リンクの段階は単に行われない。
+最終的な出力は、それぞれのソースファイルについて一つずつのオブジェクトファイルという形になる。
 .Sp
-By default, the object file name for a source file is made by replacing
-the suffix \fB.c\fR, \fB.i\fR, \fB.s\fR, etc., with \fB.o\fR.
+既定では、あるソースファイルに対するオブジェクトファイルの名前は
+\&\fB.c\fR, \fB.i\fR, \fB.s\fR 等の接尾辞を \fB.o\fR によって置換したものとなる。
 .Sp
-Unrecognized input files, not requiring compilation or assembly, are
-ignored.
+認識されない入力ファイル（コンパイルまたはアセンブルを必要としないもの）は無視される。
 .IP "\fB\-S\fR" 4
 .IX Item "-S"
-Stop after the stage of compilation proper; do not assemble.  The output
-is in the form of an assembler code file for each non-assembler input
-file specified.
+厳密な意味でのコンパイルの段階の後に停止し、アセンブルを行わない。
+出力は、指定されたそれぞれのアセンブラでない入力に対して一つずつのアセンブラコードとなる。
 .Sp
-By default, the assembler file name for a source file is made by
-replacing the suffix \fB.c\fR, \fB.i\fR, etc., with \fB.s\fR.
+既定では、あるソースファイルに対するアセンブラファイルの名前は
+\&\fB.c\fR, \fB.i\fR 等の接尾辞を \fB.s\fR によって置換したものとなる。
 .Sp
-Input files that don't require compilation are ignored.
+コンパイルを必要としない入力ファイルは無視される。
 .IP "\fB\-E\fR" 4
 .IX Item "-E"
-Stop after the preprocessing stage; do not run the compiler proper.  The
-output is in the form of preprocessed source code, which is sent to the
-standard output.
+プリプロセスの段階の後に停止し、厳密な意味でのコンパイルを行わない。
+出力はプリプロセス済みソースコードの形式であり、標準出力に送られる。
 .Sp
-Input files that don't require preprocessing are ignored.
+プリプロセスを必要としない入力ファイルは無視される。
 .IP "\fB\-o\fR \fIfile\fR" 4
 .IX Item "-o file"
 Place output in file \fIfile\fR.  This applies to whatever
